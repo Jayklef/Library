@@ -1,11 +1,17 @@
 package com.jayklef.Library.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.validation.beanvalidation.SpringValidatorAdapter;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Getter
+@Setter
+@NoArgsConstructor
 @Entity
 @Table(name = "publishers")
 public class Publisher {
