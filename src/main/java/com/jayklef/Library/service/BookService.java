@@ -24,7 +24,7 @@ public class BookService {
         return book;
     }
 
-    public void  createBook(Book book){
+    public void createBook(Book book){
         bookRepository.save(book);
     }
 
