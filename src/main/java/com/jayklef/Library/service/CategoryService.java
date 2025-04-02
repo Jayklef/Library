@@ -22,7 +22,11 @@ public class CategoryService {
         return categoryRepository.findAll();
     }
 
-    public Category getCategory(Long id){
+    public void updateCategory(Category category){
+        categoryRepository.save(category);
+    }
+
+    public Category findCategory(Long id){
         Category category = categoryRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Category with id: " + id + "not found"));
         return category;

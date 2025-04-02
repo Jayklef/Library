@@ -21,7 +21,11 @@ public class PublisherService {
         return publisherRepository.findAll();
     }
 
-    public Publisher getPublisher(Long id){
+    public void updatePublisher(Publisher publisher){
+        publisherRepository.save(publisher);
+    }
+
+    public Publisher findPublisher(Long id){
         Publisher publisher = publisherRepository.findById(id)
                 .orElseThrow(()-> new RuntimeException("Publisher not found"));
         return publisher;
