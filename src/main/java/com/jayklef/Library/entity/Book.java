@@ -45,11 +45,17 @@ public class Book {
     private Set<Publisher> publishers = new HashSet<Publisher>();
 
 
+    public Book(String isbn, String name, String description) {
+        this.isbn = isbn;
+        this.name = name;
+        this.description = description;
+    }
+
+
     public void removePublisher(Publisher publisher){
         this.publishers.remove(publisher);
         publisher.getBooks().remove(publisher);
     }
-
 
     public void addPublisher(Publisher publisher){
         this.publishers.add(publisher);
